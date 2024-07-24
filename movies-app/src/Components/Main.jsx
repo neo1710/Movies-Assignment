@@ -1,20 +1,24 @@
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import './Main.css';
 import axios from "axios";
 import { Movie } from "./Movie";
+import { SkeletonCard } from "./Skeleton";
 
 
 
 export const Main=()=>{
     const [data,setData]=useState([]);
+    const [load,setLoad]=useState(false);
     const [inp,setInp]=useState("");
 
     useEffect(()=>{
+        setLoad(true)
    axios.get(`https://www.omdbapi.com/?apikey=bd5976ba&s=%22harry%20potter%22&type=movie`).then((res)=>{
 setData(res.data.Search);
-
+setLoad(false)
    }).catch((err)=>{
 console.log(err);
+setLoad(false)
    })
     },[])
     console.log(data);
@@ -22,11 +26,13 @@ console.log(err);
 
 function search(e){
    e.preventDefault();
-
+setLoad(true);
     axios.get(`https://www.omdbapi.com/?apikey=bd5976ba&s=${inp}&type=movie`).then((res)=>{
         setData(res.data.Search);
+        setLoad(false);
     }).catch((err)=>{
         console.log(err);
+        setLoad(false);
     })
 }
 
@@ -34,11 +40,18 @@ function search(e){
     <div className="search">
         <input className="searchI" value={inp} onChange={(e)=>{ setInp(e.target.value);}}
          type="text" placeholder="Search Your Movies..." />
-         <button onClick={(e)=>{search(e)}} className="searchB">Search</button>
+         <button onClick={(e)=>{search(e)}} className="searchB">{load?"Loading...":"Search"}</button>
     </div>
 
 <div className="movies">
-    {data.map((ele,i)=>(
+    {load?  (<React.Fragment>
+          <SkeletonCard width="200px" height="300px" />
+          <SkeletonCard width="200px" height="300px" />
+          <SkeletonCard width="200px" height="300px" />
+          <SkeletonCard width="200px" height="300px" />
+          <SkeletonCard width="200px" height="300px" />
+          <SkeletonCard width="200px" height="300px" />
+        </React.Fragment>):data.map((ele,i)=>(
 <Movie key={i} name={ele.Title} year={ele.Year} img={ele.Poster} />
     ))}
 </div>

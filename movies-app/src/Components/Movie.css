@@ -1,0 +1,21 @@
+.movie{
+    width: 100%;
+    border: grey 1px solid;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.movie>h2{
+ display: block;
+ margin: auto;
+color: white;
+}
+
+.movie>img{
+    width: 70%;
+    border-radius: 10px;
+}
+.movie>h3{
+    color: white;
+}
+

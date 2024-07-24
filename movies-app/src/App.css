@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  width: 100%;
+  background: linear-gradient(black,purple);
+}
+
+button{
+  background:linear-gradient(blue,aliceblue) ;
+  border: none;
+  padding: 8px;
+  color: black;
+}
+

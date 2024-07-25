@@ -19,6 +19,7 @@
     align-items: center; /* Center vertically */
     justify-content: center; /* Center horizontally */
     border-radius: 15px;
+    border:grey 1px solid;
    margin-bottom: 20px;
    position: relative;
 }
@@ -30,18 +31,23 @@
 
 .video>p{
     position: absolute;
-    text-align: center;
     z-index: 1;
-    color: lightblue;
+    color: red;
     font-size: 1.5rem;
     font-weight: bold;
-  
 }
 
 @media screen and (max-width : 500px){
 
 .video{
     width: 80%;
+}
+.video>p{
+    font-size: 1rem;
+}
+
+.slider>p{
+    font-size: 1rem;  
 }
 
 }

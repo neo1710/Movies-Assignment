@@ -1,5 +1,5 @@
 *{
-  font-family: Courier, monospace;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .App {
@@ -13,14 +13,13 @@
   background: none;
   margin: 0;
   padding: 10px;
-
+width: 100%;
 }
 
-.nav>h1{
-color: lightblue;
-background: none;
-margin: 0;
-padding: 0;
+.nav>img{
+  display: block;
+  width: 20%;
+  margin: auto;
 }
 
 button{
@@ -31,4 +30,10 @@ button{
 }
 button:hover{
   background: grey;
+}
+
+@media screen and (max-width : 500px) {
+  .nav>img{
+    width: 40%;
+  }
 }

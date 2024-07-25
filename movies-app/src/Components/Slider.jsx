@@ -11,7 +11,8 @@ export const Slider=()=>{
     <source src={video} type="video/mp4"/>
     Your browser does not support the video tag.
   </video>
-  <p>Cinema has no boundaries it's ribbon of dreams.</p>
+  <p><img style={{width:"100%"}}
+   src="https://www.freepnglogos.com/uploads/marvel-logo-png/new-marvel-studios-logo-debuted-marvelstudios-3.png" alt="" /></p>
         </div>
     </div>
 }

@@ -10,37 +10,33 @@ export const Main=()=>{
     const [data,setData]=useState([]);
     const [load,setLoad]=useState(false);
     const [inp,setInp]=useState("");
+    const [s,setS]=useState("Harry Potter");
+    const [page,setPage]=useState(1);
 
     useEffect(()=>{
         setLoad(true)
-   axios.get(`https://www.omdbapi.com/?apikey=bd5976ba&s=%22harry%20potter%22&type=movie`).then((res)=>{
-setData(res.data.Search);
-setLoad(false)
-   }).catch((err)=>{
-console.log(err);
-setLoad(false)
-   })
-},[])
+        axios.get(`https://www.omdbapi.com/?apikey=bd5976ba&s=${s}&type=movie&page=${page}`).then((res)=>{
+       
+            if(res.data.Response==="True"){ 
+             setData(res.data.Search);
+         }else{
+                 setData([]);
+             }
+             console.log(res.data)
+             setLoad(false);
+         }).catch((err)=>{
+             console.log(err);
+             setLoad(false);
+             setData([])
+             })
+},[s,page])
 
 
 function search(e){  //search button function to get search results
    e.preventDefault();
-setLoad(true);
-    axios.get(`https://www.omdbapi.com/?apikey=bd5976ba&s=${inp}&type=movie`).then((res)=>{
-       
-       if(res.data.Response==="True"){ 
-        setData(res.data.Search);
-    }else{
-            setData([]);
-        }
-        console.log(res.data)
-        setLoad(false);
-    }).catch((err)=>{
-        console.log(err);
-        setLoad(false);
-        setData([])
-    })
+setS(inp);
 }
+
 
     return <div className="main">
       
@@ -63,8 +59,9 @@ setLoad(true);
     ))}
 </div>
 }
-<div className="page">
-    <button>Prev</button> {1} <button>Next</button>
+<div style={{color:"white",marginTop:"20px",padding:"5px"}} className="page">
+    <button disabled={page===1?true:false} 
+    onClick={()=>{setPage(page-1)}}>Prev</button> {page} <button onClick={()=>{setPage(page+1)}} >Next</button>
 </div>
     </div>
 }

@@ -1,0 +1,47 @@
+.slider{
+    width: 100%;
+}
+.slider>p{
+    text-align: center;
+    color: lightblue;
+    font-size: 1.5rem;
+    font-weight: bold;
+  
+}
+
+.video{
+    height: 400px;
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;;
+    overflow: hidden; /* Ensures the video doesn't overflow */
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    border-radius: 15px;
+   margin-bottom: 20px;
+   position: relative;
+}
+
+.video-background{
+    object-fit: cover;
+}
+
+
+.video>p{
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    color: lightblue;
+    font-size: 1.5rem;
+    font-weight: bold;
+  
+}
+
+@media screen and (max-width : 500px){
+
+.video{
+    width: 80%;
+}
+
+}

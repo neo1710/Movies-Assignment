@@ -1,5 +1,5 @@
 .movie{
-    width: 100%;
+    width: 90%;
     border: grey 1px solid;
     border-radius: 10px;
     padding: 5px;
@@ -8,14 +8,98 @@
 .movie>h2{
  display: block;
  margin: auto;
-color: white;
-}
-
-.movie>img{
-    width: 70%;
-    border-radius: 10px;
+color: lightblue;
 }
 .movie>h3{
-    color: white;
+    display: none;
+}
+.movie>p{
+    color: lightblue;
+}
+.movie>img{
+    width: 60%;
+    border-radius: 10px;
+
 }
 
+
+.Modal{
+    position: fixed;
+    background:linear-gradient(black,purple);
+    width: 85%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    border-radius: 15px;
+    border: grey 1px solid;
+    padding: 5px;
+}
+
+.Modal>div{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.Modal>div>img{
+width: 30%;
+border-radius: 10px;
+}
+
+
+
+
+
+.close{
+    background: red;
+    color: white;
+    position:absolute;
+    right: 0;
+    bottom: 0;
+}
+.close:hover{
+background: grey;
+}
+
+.Modal>div>div{
+    width: 50%;
+}
+.Modal>div>div>p{
+    color: lightblue;
+}
+
+
+
+@media screen and (min-width : 500px) and (max-width:800px) {
+    .Modal>div>img{
+        width: 40%;
+        border: 10px;
+        } 
+}
+
+@media screen and (max-width : 500px){
+
+    .movie>h3{
+        display: block;
+        margin: auto;
+       color: lightblue;
+       }
+       .movie>h3{
+           display: none;
+       }
+    .Modal>div{
+    display: block;
+    margin: auto;
+        } 
+
+     .Modal>div>div{
+        width: 90%;
+        margin: auto;
+     }   
+     .Modal>div>img{
+        width: 50%;
+     }
+}

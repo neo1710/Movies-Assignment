@@ -90,6 +90,7 @@ option{
         width:70% ;
         display: flex;
         justify-content: space-around;
+        align-items: center;
     }
     .filter2{
         width: 40%;

@@ -42,7 +42,8 @@ console.log(res.data)
     <p>Genre - {data.Genre}</p>
     <p>Released On - {data.Released}| Runtime - {data.Runtime}</p>
     <p>Overview - {data.Plot}</p>
-    <p style={{color:"black",textAlign:'left'}} className='rat'>IMDb Rating  -  {data.imdbRating}</p>
+   <div style={{width:"40%",backgroundColor:"yellow"}}>
+    <p style={{color:"black",textAlign:'left'}} className='rat'>IMDb Rating  -  {data.imdbRating}</p></div> 
    
     </div>
     <button className='close' onClick={()=>{setSee(false)}}>Close</button>

@@ -1,8 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import { Main } from './Components/Main';
 import { Slider } from './Components/Slider';
-import img from "./Media/inside (1).png"
+import img from "./Media/inside (2).png"
 function App() {
   return (
     <div className="App">
@@ -12,6 +11,13 @@ function App() {
       </div>
       <Slider/>
       <Main/>
+      <div className='footer'>
+        <img src={img} alt='err'/>
+        <div>
+          <a>Contact</a><br/>
+          <a>Help</a>
+        </div>
+      </div>
     </div>
   );
 }

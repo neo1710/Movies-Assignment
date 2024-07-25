@@ -5,7 +5,7 @@ export const Slider=()=>{
 
     return <div className="slider">
 
-        <p>Explore everything about your favorite movies.</p>
+        <p>FIND ANY MOVIE'S DETAILS HERE</p>
         <div className="video">
         <video className='video-background' autoPlay loop muted>
     <source src={video} type="video/mp4"/>

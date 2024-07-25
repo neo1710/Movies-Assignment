@@ -27,8 +27,8 @@ console.log(res.data)
 
     return <div className="movie">
         <img src={img} alt="err" />
-        <h2>{name}</h2>
-        <h3>{name}</h3>
+        <h2 onClick={show}>{name}</h2>
+        <h3 onClick={show}>{name}</h3>
         <p>{year}</p>
         <button className="det" onClick={show}>Show More</button>
        { see? <div className='Modal'>
@@ -38,10 +38,11 @@ console.log(res.data)
    <div>
     <p>Cast  -  {data.Actors}</p>
     <p>Director - {data.Director}</p>
-    <p>IMDb Rating  -  {data.imdbRating}</p>
+    
     <p>Genre - {data.Genre}</p>
     <p>Released On - {data.Released}| Runtime - {data.Runtime}</p>
     <p>Overview - {data.Plot}</p>
+    <p style={{color:"black",textAlign:'left'}} className='rat'>IMDb Rating  -  {data.imdbRating}</p>
    
     </div>
     <button className='close' onClick={()=>{setSee(false)}}>Close</button>

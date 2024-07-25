@@ -7,12 +7,11 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  background: linear-gradient(black,purple);
+  background:white;
 }
 .nav{
   background: none;
   margin: 0;
-  padding: 10px;
 width: 100%;
 }
 
@@ -23,14 +22,36 @@ width: 100%;
 }
 
 button{
-  background:linear-gradient(blue,lightblue) ;
+  background:skyblue;
   border: none;
   padding: 8px;
-  color: black;
+  color: white;
+  border-radius: 5px;
 }
 button:hover{
   background: grey;
 }
+
+.footer{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer>img{
+  width: 20%;
+  
+}
+
+.footer>div{
+  width: 20%;
+}
+a{
+  color: lightblue;
+}
+
+
 
 @media screen and (max-width : 500px) {
   .nav>img{

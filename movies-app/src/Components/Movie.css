@@ -1,10 +1,12 @@
 .movie{
     width: 90%;
-    border: grey 1px solid;
     border-radius: 10px;
     padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
+.movie:hover{
+    border: darkgray 2px solid;
+}
 .movie>h2{
  display: block;
  margin: auto;
@@ -25,7 +27,7 @@ color: lightblue;
 
 .Modal{
     position: fixed;
-    background:linear-gradient(black,purple);
+    background:white;
     width: 85%;
     top: 50%;
     left: 50%;
@@ -34,6 +36,10 @@ color: lightblue;
     border-radius: 15px;
     border: grey 1px solid;
     padding: 5px;
+}
+
+.Modal:hover{
+    border: darkgray 2px solid;
 }
 
 .Modal>div{
@@ -47,6 +53,11 @@ color: lightblue;
 .Modal>div>img{
 width: 30%;
 border-radius: 10px;
+}
+
+.Modal>div>div>p{
+    display: block;
+    text-align: left;
 }
 
 
@@ -67,10 +78,16 @@ background: grey;
 .Modal>div>div{
     width: 50%;
 }
+
 .Modal>div>div>p{
     color: lightblue;
 }
 
+.rat{
+    display: inline;
+    background-color: yellow;
+    border-radius: 5px;
+}
 
 
 @media screen and (min-width : 500px) and (max-width:800px) {
